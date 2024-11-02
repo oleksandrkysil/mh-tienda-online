@@ -28,6 +28,7 @@ watch(
     updateState();
   },
 );
+
 </script>
 
 <template>

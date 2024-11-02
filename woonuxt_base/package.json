@@ -1,5 +1,5 @@
 {
-  "name": "woonuxt",
+  "name": "Tienda online",
   "version": "4.3.5",
   "main": "./nuxt.config.ts",
   "type": "module"

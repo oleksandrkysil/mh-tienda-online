@@ -188,6 +188,7 @@ export function useHelpers() {
     const errorMessage = error?.gqlErrors?.[0]?.message;
     if (errorMessage) {
       console.error(errorMessage);
+      alert(errorMessage);
     }
   };
 

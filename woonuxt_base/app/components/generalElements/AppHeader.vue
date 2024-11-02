@@ -7,7 +7,7 @@ const { isShowingSearch } = useSearching();
     <div class="container flex items-center justify-between py-4">
       <div class="flex items-center">
         <MenuTrigger class="lg:hidden" />
-        <Logo class="md:w-[160px]" />
+        <Logo class="md:w-[170px]" />
       </div>
       <MainMenu class="items-center hidden gap-6 text-sm text-gray-500 lg:flex lg:px-4" />
       <div class="flex justify-end items-center md:w-[160px] flex-1 ml-auto gap-4 md:gap-6">
@@ -16,6 +16,7 @@ const { isShowingSearch } = useSearching();
         <div class="flex gap-4 items-center">
           <SignInLink />
           <CartTrigger />
+          <LangSwitcher />
         </div>
       </div>
     </div>

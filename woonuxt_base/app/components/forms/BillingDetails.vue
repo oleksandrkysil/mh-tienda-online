@@ -7,6 +7,7 @@ const props = defineProps({
 });
 
 const billing = toRef(props, 'modelValue');
+
 </script>
 
 <template>
@@ -25,15 +26,15 @@ const billing = toRef(props, 'modelValue');
       <label for="address1">{{ $t('messages.billing.address1') }}</label>
       <input id="address1" v-model="billing.address1" placeholder="O'Connell Street 47" autocomplete="street-address" type="text" required />
     </div>
-
-    <div v-if="isBillingAddressEnabled" class="w-full col-span-full">
+    <!-- Temporary deactivated -->
+    <div v-if="isBillingAddressEnabled" class="w-full col-span-full" style="display: none;">
       <label for="address2">{{ $t('messages.billing.address2') }} ({{ $t('messages.general.optional') }})</label>
       <input id="address2" v-model="billing.address2" placeholder="Apartment, studio, or floor" autocomplete="address-line2" type="text" />
     </div>
 
-    <div v-if="isBillingAddressEnabled" class="w-full">
-      <label for="city">{{ $t('messages.billing.city') }}</label>
-      <input id="city" v-model="billing.city" placeholder="New York" autocomplete="locality" type="text" required />
+    <div v-if="isBillingAddressEnabled" class="w-full col-span-full">
+      <label for="country">{{ $t('messages.billing.country') }}</label>
+      <CountrySelect id="country" v-model="billing.country" :default-value="billing.country" @change="updateShippingLocation" autocomplete="country" />
     </div>
 
     <div v-if="isBillingAddressEnabled" class="w-full">
@@ -48,11 +49,12 @@ const billing = toRef(props, 'modelValue');
     </div>
 
     <div v-if="isBillingAddressEnabled" class="w-full">
-      <label for="country">{{ $t('messages.billing.country') }}</label>
-      <CountrySelect id="country" v-model="billing.country" :default-value="billing.country" @change="updateShippingLocation" autocomplete="country" />
+      <label for="city">{{ $t('messages.billing.city') }}</label>
+      <input id="city" v-model="billing.city" placeholder="New York" autocomplete="locality" type="text" required />
     </div>
 
-    <div v-if="isBillingAddressEnabled" class="w-full">
+    <!-- Temporary deactivated -->
+    <div v-if="isBillingAddressEnabled" class="w-full" style="display: none;">
       <label for="zip">{{ $t('messages.billing.zip') }}</label>
       <input id="zip" v-model="billing.postcode" placeholder="10001" autocomplete="postal-code" type="text" />
     </div>

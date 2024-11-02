@@ -6,11 +6,11 @@ const { wishlistLink } = useAuth();
 <template>
   <footer class="bg-white order-last">
     <div class="container flex flex-wrap justify-between gap-12 my-24 md:gap-24">
-      <div class="mr-auto">
-        <Logo />
+      <!-- <div class="mr-auto"> -->
+        <!-- <Logo />
         <WebsiteShortDescription />
-        <LangSwitcher class="mt-8" />
-      </div>
+        <LangSwitcher class="mt-8" /> -->
+      <!-- </div> -->
       <div class="w-3/7 lg:w-auto">
         <div class="mb-1 font-semibold">Information</div>
         <div class="text-sm">
@@ -48,7 +48,7 @@ const { wishlistLink } = useAuth();
         </div>
       </div>
     </div>
-    <div class="container border-t flex items-center justify-center mb-4">
+    <!-- <div class="container border-t flex items-center justify-center mb-4">
       <div class="copywrite">
         <p class="py-4 text-xs text-center">
           <a href="https://woonuxt.com" :title="`WooNuxt v${wooNuxtVersionInfo}`">{{ `WooNuxt v${wooNuxtVersionInfo}` }}</a> - by
@@ -56,7 +56,7 @@ const { wishlistLink } = useAuth();
         </p>
       </div>
       <SocialIcons class="ml-auto" />
-    </div>
+    </div> -->
   </footer>
 </template>
 

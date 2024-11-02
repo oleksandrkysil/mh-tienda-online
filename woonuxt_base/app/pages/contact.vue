@@ -1,20 +1,53 @@
 <template>
   <div class="container my-8">
-    <h1 class="mb-8 text-3xl font-semibold text-primary">Contact Page</h1>
-    <div class="my-8 prose">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facilis, commodi illum repellat accusamus praesentium quaerat ut ducimus ipsam deserunt, a voluptate id
-        similique ullam, provident tenetur molestiae ad. Ea aperiam esse eaque aut, beatae consectetur nam velit unde! Et excepturi quam eos labore, nulla impedit recusandae
-        quaerat maxime expedita.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo voluptate neque in odio officia assumenda nulla cumque. Veniam et tenetur accusantium, fuga pariatur
-        repellendus impedit. Quod sint odio quisquam! Sequi repellendus eum dolorum eveniet, quidem dolor necessitatibus velit sunt esse maiores. Eum odit dolorum mollitia?
-        Adipisci amet hic veniam debitis architecto nobis necessitatibus inventore iure ullam cum illo quae quam, excepturi beatae itaque exercitationem magnam quidem aspernatur
-        iusto. Quos, reprehenderit? Dignissimos autem recusandae qui sit cum velit consequatur pariatur illum omnis excepturi, adipisci ab eius, optio, temporibus iure unde
-        inventore. Maxime officiis tempore voluptatum ipsa, ab possimus atque corporis repellendus obcaecati, numquam fuga ullam doloremque ea reprehenderit earum quam culpa neque
-        dolor sint voluptates qui rem? Ipsam reiciendis non illum?
-      </p>
-    </div>
+    <h1 v-if="!loading" class="mb-8 text-3xl font-semibold text-primary">{{ pageTitle }}</h1>
+    <div v-if="!loading" class="my-8 prose" v-html="pageContent"></div>
+    <div v-else>Loading...</div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue';
+
+export default defineComponent({
+  setup() {
+    const pageTitle = ref<string>('');
+    const pageContent = ref<string>('');
+    const loading = ref<boolean>(true);
+
+    onMounted(async () => {
+      try {
+        const response = await fetch('https://next-wp-store.x10.mx/wp/graphql/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: `
+              query {
+                page(id: "contact", idType: URI) {
+                  title
+                  content
+                }
+              }
+            `,
+          }),
+        });
+        const result = await response.json();
+        pageTitle.value = result.data.page.title;
+        pageContent.value = result.data.page.content;
+      } catch (error) {
+        console.error("Error fetching page content:", error);
+      } finally {
+        loading.value = false;
+      }
+    });
+
+    return { pageTitle, pageContent, loading };
+  },
+});
+</script>
+
+<style scoped>
+/* Додайте стилі за потреби */
+</style>

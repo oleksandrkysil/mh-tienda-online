@@ -4,6 +4,7 @@ import { countries } from '#constants';
 export const useCountry = () => {
     // State to store allowed countries
     const allowedCountries = useState<CountriesEnum[] | null>('allowedCountries', () => null);
+    
     const isLoadingAllowedCountries = useState<boolean>('isLoadingAllowedCountries', () => false);
 
     // State to store the countries to be shown - init with static countries
@@ -46,7 +47,7 @@ export const useCountry = () => {
         if (countryStatesDict.value[countryCode] || isLoadingCountryStates.value[countryCode]) {
             return;
         }
-
+        console.log(countryStatesDict)
         isLoadingCountryStates.value[countryCode] = true;
 
         try {

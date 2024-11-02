@@ -45,29 +45,29 @@ useSeoMeta({
       <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
         <img src="/icons/box.svg" width="60" height="60" alt="Free Shipping" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">Free Shipping</h3>
-          <p class="text-sm">Free shipping on order over €50</p>
+          <h3 class="text-xl font-semibold">Ventaja 1</h3>
+          <p class="text-sm">Lorem ipsum dolor sin ahmed</p>
         </div>
       </div>
       <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
         <img src="/icons/moneyback.svg" width="60" height="60" alt="Money Back" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">Peace of Mind</h3>
-          <p class="text-sm">30 days money back guarantee</p>
+          <h3 class="text-xl font-semibold">Ventaja 1</h3>
+          <p class="text-sm">Lorem ipsum dolor sin ahmed</p>
         </div>
       </div>
       <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
         <img src="/icons/secure.svg" width="60" height="60" alt="Secure Payment" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">100% Payment Secure</h3>
-          <p class="text-sm">Your payment are safe with us.</p>
+          <h3 class="text-xl font-semibold">Ventaja 1</h3>
+          <p class="text-sm">Lorem ipsum dolor sin ahmed</p>
         </div>
       </div>
       <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
         <img src="/icons/support.svg" width="60" height="60" alt="Support 24/7" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">Support 24/7</h3>
-          <p class="text-sm">24/7 Online support</p>
+          <h3 class="text-xl font-semibold">Ventaja 1</h3>
+          <p class="text-sm">Lorem ipsum dolor sin ahmed</p>
         </div>
       </div>
     </section>

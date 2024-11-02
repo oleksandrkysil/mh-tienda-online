@@ -4,7 +4,7 @@ const runtimeConfig = useRuntimeConfig();
 const img = useImage();
 
 const logoUrl = runtimeConfig?.public?.LOGO ? img(runtimeConfig?.public?.LOGO) : null;
-const faviconUrl = '/logo.svg';
+const faviconUrl = 'https://martinezhermanos.com/wp-content/uploads/2021/10/martinez-hermanos-logo.png';
 </script>
 
 <template>

@@ -17,7 +17,7 @@ const imgHeight = Math.round(imgWidth * 1.125);
     <NuxtImg
       :width="imgWidth"
       :height="imgHeight"
-      class="absolute inset-0 object-cover w-full h-full"
+      class="absolute inset-0 object-cover w-full h-full hover:scale-105 transition-all"
       :src="node.image?.sourceUrl || FALLBACK_IMG"
       :alt="node.image?.altText || node.name"
       :title="node.image?.title || node.name"
@@ -26,7 +26,7 @@ const imgHeight = Math.round(imgWidth * 1.125);
       placeholder
       placeholder-class="blur-xl" />
     <div class="absolute inset-x-0 bottom-0 opacity-50 bg-gradient-to-t from-black to-transparent h-1/2" />
-    <span class="relative z-10 mt-auto mb-2 text-sm font-semibold text-white capitalize md:text-base md:mb-4" v-html="node.name" />
+    <span class="relative z-10 mt-auto mb-2 text-sm font-semibold text-white capitalize md:text-base md:mb-4 truncate mx-1" v-html="node.name" />
   </NuxtLink>
 </template>
 
