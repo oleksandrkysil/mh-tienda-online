@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: '/mh-tienda-online/',
     head: {
       htmlAttrs: { lang: 'es' },
       link: [{ rel: 'icon', href: '', type: 'image/svg+xml' }],
