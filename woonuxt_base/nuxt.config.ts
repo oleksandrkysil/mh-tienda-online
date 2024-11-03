@@ -34,14 +34,16 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      GQL_HOST: process.env.GQL_HOST || 'https://localhost:3000/graphql/',
+      // GQL_HOST: process.env.GQL_HOST || 'https://localhost:3000/graphql/',
+      GQL_HOST: process.env.GQL_HOST || 'https://next-wp-store.x10.mx/wp/graphql/',
     }
   },
 
   'graphql-client': {
     clients: {
       default: {
-        host: process.env.GQL_HOST || 'https://localhost:3000/graphql/',
+        // host: process.env.GQL_HOST || 'https://localhost:3000/graphql/',
+        host: process.env.GQL_HOST || 'https://next-wp-store.x10.mx/wp/graphql/',
         corsOptions: { mode: 'cors', credentials: 'include' },
       },
     },
