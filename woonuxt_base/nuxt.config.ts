@@ -16,6 +16,12 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'default' },
   },
 
+  vite: {
+    build: {
+      outDir: 'dist'
+    }
+  },
+  
   experimental: {
     sharedPrerenderData: true,
     buildCache: true,
