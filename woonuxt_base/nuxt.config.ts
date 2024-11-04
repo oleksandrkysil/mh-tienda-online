@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: '/mh-tienda-online/',
     head: {
       htmlAttrs: { lang: 'es' },
       link: [{ rel: 'icon', href: '', type: 'image/svg+xml' }],
@@ -16,12 +15,6 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'default' },
   },
 
-  vite: {
-    build: {
-      outDir: 'dist'
-    }
-  },
-  
   experimental: {
     sharedPrerenderData: true,
     buildCache: true,
