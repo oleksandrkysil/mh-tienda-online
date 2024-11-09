@@ -46,8 +46,12 @@ useHead({
 </template>
 
 <style lang="postcss">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 html,
 body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   @apply text-gray-900;
   scroll-behavior: smooth;
   background-color: #edf0f9;

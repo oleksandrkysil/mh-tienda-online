@@ -54,11 +54,11 @@ const imagetoDisplay = computed<string>(() => {
         placeholder-class="blur-xl" />
     </NuxtLink>
     <div class="p-2">
-      <StarRating v-if="storeSettings.showReviews" :rating="node.averageRating" :count="node.reviewCount" />
-      <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name">
-        <h2 class="mb-2 font-light leading-tight group-hover:text-primary">{{ node.name }}</h2>
+      <StarRating class="w-full justify-center" v-if="storeSettings.showReviews" :rating="node.averageRating" :count="node.reviewCount" />
+      <NuxtLink class="text-center" v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name">
+        <h2 class="mb-2 font-normal text-blue-900 leading-tight group-hover:text-primary">{{ node.name }}</h2>
       </NuxtLink>
-      <ProductPrice class="text-sm" :sale-price="node.salePrice" :regular-price="node.regularPrice" />
+      <ProductPrice class="text-2xl text-center flex justify-center" :sale-price="node.salePrice" :regular-price="node.regularPrice" />
     </div>
   </div>
 </template>

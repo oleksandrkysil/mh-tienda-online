@@ -13,12 +13,3 @@ watch(locale, (newLocale) => {
     <option class="lang-items" v-for="locale in locales" :key="locale" :value="locale.code" v-html="locale.name" />
   </select>
 </template>
-
-<style scoped>
-.lang-items:nth-child(3),
-.lang-items:nth-child(4),
-.lang-items:nth-child(5),
-.lang-items:nth-child(6){
-  display: none;
-}
-</style>

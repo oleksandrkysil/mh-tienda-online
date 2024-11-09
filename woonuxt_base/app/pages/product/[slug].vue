@@ -96,16 +96,16 @@ const disabledAddToCart = computed(() => {
         <div class="lg:max-w-md xl:max-w-lg md:py-2 w-full">
           <div class="flex justify-between mb-4">
             <div class="flex-1">
-              <h1 class="flex flex-wrap items-center gap-2 mb-2 text-2xl font-sesmibold">
+              <h1 class="flex flex-wrap items-center gap-2 mb-2 text-2xl font-sesmibold text-blue-900 relative before:absolute before:bg-blue-500 w-[]">
                 {{ type.name }}
                 <LazyWPAdminLink :link="`/wp-admin/post.php?post=${product.databaseId}&action=edit`">Edit</LazyWPAdminLink>
               </h1>
               <StarRating :rating="product.averageRating || 0" :count="product.reviewCount || 0" v-if="storeSettings.showReviews" />
             </div>
-            <ProductPrice class="text-xl" :sale-price="type.salePrice" :regular-price="type.regularPrice" />
+            <ProductPrice class="text-xl text-red-700" :sale-price="type.salePrice" :regular-price="type.regularPrice" />
           </div>
 
-          <div class="grid gap-2 my-8 text-sm empty:hidden">
+          <div class="grid gap-2 my-2 text-sm empty:hidden">
             <div v-if="!isExternalProduct" class="flex items-center gap-2">
               <span class="text-gray-400">{{ $t('messages.shop.availability') }}: </span>
               <StockStatus :stockStatus @updated="mergeLiveStockStatus" />
@@ -173,10 +173,10 @@ const disabledAddToCart = computed(() => {
           </div>
         </div>
       </div>
-      <div v-if="product.description || product.reviews" class="my-32">
+      <div v-if="product.description || product.reviews" class="my-16">
         <ProductTabs :product />
       </div>
-      <div class="my-32" v-if="product.related && storeSettings.showRelatedProducts">
+      <div class="my-16" v-if="product.related && storeSettings.showRelatedProducts">
         <div class="mb-4 text-xl font-semibold">{{ $t('messages.shop.youMayLike') }}</div>
         <ProductRow :products="product.related.nodes" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5" />
       </div>

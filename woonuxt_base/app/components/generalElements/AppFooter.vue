@@ -12,30 +12,30 @@ const { wishlistLink } = useAuth();
         <LangSwitcher class="mt-8" /> -->
       <!-- </div> -->
       <div class="w-3/7 lg:w-auto">
-        <div class="mb-1 font-semibold">Information</div>
+        <div class="mb-1 font-semibold">Información</div>
         <div class="text-sm">
-          <a class="py-1.5 block" href="https://github.com/scottyzen/woonuxt?tab=readme-ov-file#next-generation-front-end-for-woocommerce" target="_blank">About</a>
-          <a href="/" class="py-1.5 block">Careers</a>
-          <a href="/" class="py-1.5 block">Press</a>
-          <a href="https://woonuxt.com/faq" class="py-1.5 block" rel="noreferrer" target="_blank">FAQ's</a>
+          <a class="py-1.5 block" href="https://github.com/scottyzen/woonuxt?tab=readme-ov-file#next-generation-front-end-for-woocommerce" target="_blank">Sobre nosotros</a>
+          <a href="/" class="py-1.5 block">Carreras</a>
+          <a href="/" class="py-1.5 block">Prensa</a>
+          <a href="https://woonuxt.com/faq" class="py-1.5 block" rel="noreferrer" target="_blank">Preguntas frecuentes</a>
         </div>
       </div>
       <div class="w-3/7 lg:w-auto">
-        <div class="mb-1 font-semibold">Products</div>
+        <div class="mb-1 font-semibold">Productos</div>
         <div class="text-sm">
           <NuxtLink to="/products" class="py-1.5 block">{{ $t('messages.shop.newArrivals') }}</NuxtLink>
-          <NuxtLink to="/products?filter=sale[true]" class="py-1.5 block">On sale</NuxtLink>
-          <NuxtLink to="/products?orderby=rating&order=ASC&filter=rating[1]" class="py-1.5 block">Top rated</NuxtLink>
+          <NuxtLink to="/products?filter=sale[true]" class="py-1.5 block">En venta</NuxtLink>
+          <NuxtLink to="/products?orderby=rating&order=ASC&filter=rating[1]" class="py-1.5 block">Mejor calificado</NuxtLink>
           <a href="/" class="py-1.5 block">{{ $t('messages.shop.giftCards') }}</a>
         </div>
       </div>
       <div class="w-3/7 lg:w-auto">
         <div class="mb-1 font-semibold">{{ $t('messages.general.customerService') }}</div>
         <div class="text-sm">
-          <NuxtLink to="/contact" class="py-1.5 block">Contact Us</NuxtLink>
-          <a href="/" class="py-1.5 block">Shipping & Returns</a>
-          <a href="/" class="py-1.5 block">Privacy Policy</a>
-          <a href="/" class="py-1.5 block">Terms & Conditions</a>
+          <NuxtLink to="/contact" class="py-1.5 block">Contacta con nosotros</NuxtLink>
+          <a href="/" class="py-1.5 block">Envíos y devoluciones</a>
+          <a href="/" class="py-1.5 block">Política de privacidad</a>
+          <a href="/" class="py-1.5 block">Términos y condiciones</a>
         </div>
       </div>
       <div class="w-3/7 lg:w-auto">
